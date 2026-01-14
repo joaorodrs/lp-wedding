@@ -126,10 +126,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${cormorantGaramond.variable} font-sans antialiased`}>
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
-          <>
-            <Script id="meta-pixel" strategy="afterInteractive">
-              {`
+        <>
+          <Script id="meta-pixel" strategy="afterInteractive">
+            {`
                 !function(f,b,e,v,n,t,s)
                 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -141,17 +140,16 @@ export default function RootLayout({
                 fbq('init', '2661313790928781');
                 fbq('track', 'PageView');
               `}
-            </Script>
-            <noscript>
-              <img
-                height="1"
-                width="1"
-                style="display:none"
-                src="https://www.facebook.com/tr?id=2661313790928781&ev=PageView&noscript=1"
-              />
-            </noscript>
-          </>
-        )}
+          </Script>
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style="display:none"
+              src="https://www.facebook.com/tr?id=2661313790928781&ev=PageView&noscript=1"
+            />
+          </noscript>
+        </>
 
         <Script
           id="structured-data"
