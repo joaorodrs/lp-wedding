@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { TrustBadges } from "./trust-badges";
+import { trackInitiateCheckout } from "@/app/head-scripts";
 
 export function HeroSection() {
   const handleCTAClick = () => {
@@ -17,6 +18,11 @@ export function HeroSection() {
     if (benefitsSection) {
       benefitsSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handlePurchaseClick = () => {
+    trackInitiateCheckout();
+    window.open("https://payfast.greenn.com.br/152465", "_blank");
   };
 
   return (
@@ -145,6 +151,7 @@ export function HeroSection() {
                 src="/images/5.jpg"
                 alt="Planner de Casamento 2026"
                 className="relative rounded-lg shadow-2xl"
+                onClick={handlePurchaseClick}
               />
             </div>
           </div>
