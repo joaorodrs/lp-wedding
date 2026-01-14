@@ -114,7 +114,7 @@ export function HeroSection() {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">100+</div>
+                <div className="text-3xl font-bold text-primary">70+</div>
                 <div className="text-sm text-muted-foreground">
                   Páginas de Conteúdo
                 </div>
